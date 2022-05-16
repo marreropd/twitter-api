@@ -39,5 +39,4 @@ module.exports = async () => {
     user.following.push(follow);
     user.save();
   }
-
 };
