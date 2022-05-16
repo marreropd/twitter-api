@@ -7,26 +7,16 @@ const mongoose = require("mongoose");
 const dbInitialSetup = require("./dbInitialSetup");
 const APP_PORT = process.env.APP_PORT || 8000;
 const app = express();
-app.use(cors());
+
 var cors = require("cors");
 
-//const MongoStore = require("connect-mongo"); //(session.Store);
-
-/* app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    store: MongoStore.create({
-      mongoUrl: process.env.DB_CONNECTION_STRING,
-    }),
-    resave: false,
-    saveUninitialized: false,
-  }),
-);
- */
 mongoose.connect(process.env.DB_CONNECTION_STRING);
+app.use(cors());
 
 app.use(express.static("public"));
+
 app.use(express.json());
+
 routes(app);
 //dbInitialSetup();
 
