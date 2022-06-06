@@ -28,7 +28,7 @@ async function storeUser(req, res) {
         firstname: req.body.firstname,
         lastname: req.body.lastname,
         username: req.body.username,
-        // avatar: `img/${image.newFilename}`,
+        avatar: `https://i0.wp.com/www.eleganciadospuntocero.com/wp-content/uploads/2013/03/Huevo-twitter-avatar.jpg?ssl=1`,
         email: req.body.email,
         password: req.body.password,
         description: req.body.description,
